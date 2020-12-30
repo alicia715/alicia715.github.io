@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Photo Grid -->
+<div className="project1-blurb">
+  <div className="container">
+      <div className="inner-project1"> 
+          <div className="content">
+              <h1>Genre Cloud</h1>
+              <h2>An Interactive Data Visualization Website</h2>
+              <h4>Website Link:</h4>
+              <p> <a href="https://genrecloud.azurewebsites.net/" target="_blank">https://genrecloud.azurewebsites.net/</a></p>
+              <h4>Background</h4>
+              
+              <p>Genre Cloud is a website to discover your favorite genres and artists in an interactive word cloud.</p>
+              <p>Using listening history from Spotify APIs, Genre Cloud reveals insights about your genre preferences and connects you to new music.  </p>
+              <p>This project is a personal exploratory project. I work on the ideation, design, prototyping, and distribution.</p>
+      
+              <h4>Problem Statements </h4>
+                  <p>1. Non-premium Spotify members do not have access to their top genres. Music enthusiastic or people with eclectic music tastes who are non-premium Spotify members are curious about their top genres but do not have access to this information.</p>
+                  <p>2. Premium Spotify members have access to their top genres but the method of how these top genres are determined is not revealed. They are skeptical of the information presented to them by Spotify. </p>
+                  <p>3. There are over 1000 music subgenres. A user may not be familiar with some of their top genres displayed by Spotify and want to conveniently find information about those genres.  </p>
+
+              <h4> User Research </h4>
+                  <p>Premium Spotify users found their top music genres in Spotify 2020 Wrapped. I was browsing Reddit and found these comments: </p>
+                      <li>"Why is my favorite music genre pop, while never listening to it?" (refers to Problem Statement 2) </li> 
+                      <li>"Does anybody know how Spotify determines your top played genres?" (refers to Problem Statement 2) </li>
+                  
+                  <p>There are over 1000 music subgenres recorded to date and even more maintained by Spotify--they use Artificial Intelligence to category new genres and patterns. Some users are confused when they see that their top genre is a genre they are unfamiliar with. </p>
+                      <li>"What is 'scorecore?' Apparently it's one of my top genres, but I've never even heard of it before." (refers to Problem Statement 3)  </li>
+                      <li>"What genre is Escape Room?" (refers to Problem Statement 3) </li>
+
+              <h4> Brainstorming and Protoyping </h4>
+                  <p>Because we are working with data, we can use a data visualization to solve each part of our problem statement. I chose a word cloud because it is a visual representation that draws attention to text. In our case, the words are the genres.  </p>
+               
+                  <p>Visual and interactive features of the visualization will provide insights to users.</p>
+                  <p><u>Size</u>: The bigger the genre, the more the user tends to listen to it. </p>
+                  <p><u>Hover</u>: Hovering over a genre will provide a user with a list of artists they listen to that fall under that genre. This answers Problem Statement 2 (how user top genres are determined).</p>
+                  <p><u>Click</u>: Clicking on a genre will take you to a playlist filled with songs from that genre (special thanks to Glenn McDonald, creator of "The Sounds of Spotify"). This answer Problem Statement 3 (creating a convenient way for users to learn about genres) </p>
+              
+
+              <h4> Technical Implementation</h4>
+                  <p>Tools: Flask, Python, Javascript, Spotify API, HTML/CSS, Azure Cloud Services, P5.js</p>
+                  <p>Flask is a micro web framework for Python for building web applications. The Flask project structure separates the frontend, service, and application for modularization.</p>
+                  <p> Application module: </p>
+                      <li>Defines the URL endpoints and what information is presented at these endpoints (the business logic) </li>
+                      <li>Acts in the middle of Service and Frontend modules (similarily to MVC architecture). (1) uses the functions defined in the Service module. (2) performs data binding, so information on the server where the program is running can be presented to the view (frontend) for the user </li>
+                  <p> Service module: </p>
+                      <li> Implements OAuth 2.0, authentication protocol that allows one application to interact with another without giving away user password. Visually, these are the steps: (1) users login into Spotify  (2) Spotify asks if the user will grant the application (Genre Cloud) access to specific user information (3) user agrees (4) Spotify generates a token and takes user to redirect page (5) the user arrives back to the application (Genre Cloud), and Genre Cloud uses the token to access the specific user information the user approved on sharing. The application now functions with this users data!</li>
+                      <li> Defines functions to filter the data coming back, and then restructuring the data to get a dictionary in the form, "genre" to "list of artists of that genre". </li>
+                  
+                  <p> Frontend: </p>
+                      <li> Folder structure is static/css, static/js, and templates/html</li>
+                      <li> Javascript file handles the user data and fills it into the world cloud</li>
+                      <li> Html creates the web pages and CSS styles</li> 
+                  <p>Fun: Twinkly stars created with P5.js</p>
+
+                  
+              <h4>Feedback</h4>
+                  <p>"I’ll definitely be using it if I want to listen to similar artists. I can easily listen to a new playlist and discover new music." </p>
+                  <p>"It connects people to different types of music and I think that’s really important." 
+                      </p>                        
+          </div>
+     
+      </div> 
+
+  </div>
+</div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+  <p>Contact me: alicia_ong@berkeley.edu</p>
+</footer>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+
+
+</body>
+</html>
