@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<title>Alicia Ong✨</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Raleway", Arial, sans-serif}
+h1 {letter-spacing: 6px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Photo Grid -->
+<div className="project1-blurb">
+  <div className="container">
+      <div className="inner-project1"> 
+          <div className="content">
+              <h1>Twitter Stream Discord Bot</h1>
+              <h2>Real-time Tweet Stream to Discord</h2>
+              <div style="line-height:15px;"><br></div>
+
+              <div style="line-height:2px;"><br></div>
+
+              <h4>Inspiration</h4>
+              <p>As a sneaker enthusiast, I follow Twitter accounts that post updates on the latest releases. Popular releases sell-out in minutes, so having to not miss out on releases requires proactively checking or turning on notifications from these twitter accounts.</p>
+                
+              <p>Since I would only like to keep track of certain releases (ex. Jordan 1s) and notifications from certain accounts can be quite frequent, the idea came up to create a program that filters tweet notifications based on keywords and accounts. </p>
+                
+              <p>I wanted to use Discord’s real-time notification feature and stream tweets to a discord channel so that I could have the sneaker tweets neatly grouped into a channel for insights and ease of use. </p>
+
+              <p>Here is an example of the end result, in which I filtered tweets based on the keyword "restock" from sneaker accounts.</p>
+              <img src="static/tweet_radar.PNG">
+              <div style="line-height:2px;"><br></div>
+
+              <h4>Background</h4>
+              
+              <p>This project involves streaming filtered tweets to discord channels so that users can stay updated on the latest news for topics of interest.  </p>
+              <p>Using Twitter and Discord APIs, an individual can customize the rules for the tweets they receive and group topics of tweets into channels.  </p>
+              <p>This is a personal project that I currently have running on a remote server so that I can receive the notifications I desire.</p>
+              <div style="line-height:2px;"><br></div>
+
+
+              <h4>Problem Statements </h4>
+                  <p>1. Users only want to receive filtered real-time notifications from specific users.</p>
+                  <p>2. Users have many different topics they follow and would like an organized channel system to make research easier</p>
+              <div style="line-height:2px;"><br></div>
+
+              <h4> User Stories </h4>
+                  <p>The application will benefit anyone who wants to keep track of certain topics in real-time.</p>
+                  <p>Here are some user stories examples:</p>
+                      <li>The sneaker enthusiast who wants sneaker release info before the release dates but does not want to be notified on every tweet from accounts they follow.</li> 
+                      <li>The journalist who is tasked to write an article on a specific topic and wants to receive information from specific sources in real-time.</li>
+                      <li>The scientist who is researching a specific topic and wants to follow discussions started by other scientists.</li> 
+                      <li>The music lover who does not want to miss out concert tickets from their favorite artists but only wants tickets for concerts in their area.</li>
+                      <li>Someone who wants their tweets categorized into different topic channels so that it is easier to digest. </li> 
+              <br>
+
+              <h4> Brainstorming and Protoyping </h4>
+                  <p>There are 3 pieces of information that can be set to make this program customizable for the user:</p>
+                    <li>The name of the topic</li>
+                    <li>The rule that defines what tweets will be filtered in the stream</li>
+                    <li>The discord channel ID, which specifies what channel the tweets will stream into </li>
+                  <br>
+                  <img src="static/rule_structure.PNG">
+                  <br>
+                  <p><u>Design question #1</u>:  How can the user modify their rule?</p>
+                  <p><u>Answer</u>: After the user edits the rules,json file, they can restart the program and the program will clear all the rules, and then apply the rules and channels reflected in the file.  </p>
+
+                  <p><u>Design question #2</u>: If the user wants to have multiple topics, how can they add more?</p>
+                  <p><u>Answer</u>: The user can configure multiple rule objects in the rules,json file. After they restart the program, they will have filtered streams for multiple topics!</p>
+              <div style="line-height:2px;"><br></div>
+
+              <h4> Technical Implementation</h4>
+                  <p>The program consists of a Node.js backend script on the server. </p>
+                  <p>Here are its components:</p>
+                      <li>Connection to the Twitter Rule Stream endpoint to set the rules for the data stream</li>
+                      <li>Connection to the Twitter Stream endpoint to request a data stream</li>
+                      <li>Connection to Discord endpoint to activate the Discord Bot</li>
+                      <li>Listen to the stream for any data, and send the messages to the assigned discord channel</li>
+              <br>
+              <h4>Video Demo</h4>
+              <p>Coming Soon!</p>
+              <br>
+          </div>
+     
+      </div> 
+
+  </div>
+</div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-large"> 
+  <p>Contact me: alicia_ong@berkeley.edu</p>
+</footer>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myDIV");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+    </script>
+
+
+</body>
+</html>

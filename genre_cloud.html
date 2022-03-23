@@ -29,29 +29,31 @@ h1 {letter-spacing: 6px}
               
               <p>Genre Cloud is a website to discover your favorite genres and artists in an interactive word cloud.</p>
               <p>Using listening history from Spotify APIs, Genre Cloud reveals insights about your genre preferences and connects you to new music.  </p>
-              <p>This project is a personal exploratory project. I work on the ideation, design, prototyping, and distribution.</p>
+              <p>This project is a personal project. I work on the ideation, prototyping, and distribution.</p>
+              <p>Below is a guest demo. Hover over the genres to view the artists:</p>
+              <iframe src="https://genrecloud.azurewebsites.net/guest" height='500px' width='1000px'></iframe>
       
               <h4>Problem Statements </h4>
-                  <p>1. Non-premium Spotify members do not have access to their top genres. Music enthusiastic or people with eclectic music tastes who are non-premium Spotify members are curious about their top genres but do not have access to this information.</p>
-                  <p>2. Premium Spotify members have access to their top genres but the method of how these top genres are determined is not revealed. They are skeptical of the information presented to them by Spotify. </p>
-                  <p>3. There are over 1000 music subgenres. A user may not be familiar with some of their top genres displayed by Spotify and want to conveniently find information about those genres.  </p>
+                  <p>1. Users want to gain more insight into all the genres they listen to</p>
+                  <p>2. Users may be curious how their top genres are determined</p>
+                  <p>3. There are over 1000 music subgenres. A user may not be familiar with their top genres and want to conveniently find information about them </p>
 
               <h4> User Research </h4>
-                  <p>Premium Spotify users found their top music genres in Spotify 2020 Wrapped. I was browsing Reddit and found these comments: </p>
-                      <li>"Why is my favorite music genre pop, while never listening to it?" (refers to Problem Statement 2) </li> 
-                      <li>"Does anybody know how Spotify determines your top played genres?" (refers to Problem Statement 2) </li>
+                  <p>Spotify users found their top music genres in Spotify 2020 Wrapped. I was browsing Reddit and found these comments: </p>
+                      <li>"Why is my favorite music genre pop, while never listening to it?"</li> 
+                      <li>"Does anybody know how Spotify determines your top played genres?"</li>
                   
-                  <p>There are over 1000 music subgenres recorded to date and even more maintained by Spotify--they use Artificial Intelligence to category new genres and patterns. Some users are confused when they see that their top genre is a genre they are unfamiliar with. </p>
-                      <li>"What is 'scorecore?' Apparently it's one of my top genres, but I've never even heard of it before." (refers to Problem Statement 3)  </li>
-                      <li>"What genre is Escape Room?" (refers to Problem Statement 3) </li>
+                  <p>There are over 1000 music subgenres recorded to date and even more maintained by Spotify--they use AI to categorize new genres and patterns. Some users are confused when they see that their top genre is a genre they are unfamiliar with. </p>
+                      <li>"What is 'scorecore?' Apparently it's one of my top genres, but I've never even heard of it before."</li>
+                      <li>"What genre is Escape Room?"</li>
 
               <h4> Brainstorming and Protoyping </h4>
                   <p>Because we are working with data, we can use a data visualization to solve each part of our problem statement. I chose a word cloud because it is a visual representation that draws attention to text. In our case, the words are the genres.  </p>
                
                   <p>Visual and interactive features of the visualization will provide insights to users.</p>
                   <p><u>Size</u>: The bigger the genre, the more the user tends to listen to it. </p>
-                  <p><u>Hover</u>: Hovering over a genre will provide a user with a list of artists they listen to that fall under that genre. This answers Problem Statement 2 (how user top genres are determined).</p>
-                  <p><u>Click</u>: Clicking on a genre will take you to a playlist filled with songs from that genre (special thanks to Glenn McDonald, creator of "The Sounds of Spotify"). This answer Problem Statement 3 (creating a convenient way for users to learn about genres) </p>
+                  <p><u>Hover</u>: Hovering over a genre will provide a user with a list of artists they listen to that fall under that genre. This answers Problem Statement 2 - how user top genres are determined.</p>
+                  <p><u>Click</u>: Clicking on a genre will take you to a playlist filled with songs from that genre (special thanks to Glenn McDonald, creator of "The Sounds of Spotify"). This answer Problem Statement 3 - creating a convenient way for users to learn about genres </p>
               
 
               <h4> Technical Implementation</h4>
@@ -68,13 +70,10 @@ h1 {letter-spacing: 6px}
                       <li> Folder structure is static/css, static/js, and templates/html</li>
                       <li> Javascript file handles the user data and fills it into the world cloud</li>
                       <li> Html creates the web pages and CSS styles</li> 
-                  <p>Fun: Twinkly stars created with P5.js</p>
+                  <p>Visuals: Stars created with P5.js</p>
 
                   
-              <h4>Feedback</h4>
-                  <p>"I’ll definitely be using it if I want to listen to similar artists. I can easily listen to a new playlist and discover new music." </p>
-                  <p>"It connects people to different types of music and I think that’s really important." 
-                      </p>                        
+              <br>                      
           </div>
      
       </div> 
